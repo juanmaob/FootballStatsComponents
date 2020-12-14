@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="main_component_attributes">
+        <attr name="label" format="string" />
+        <attr name="progress" format="integer" />
+        <attr name="mainColor" format="integer" />
+        <attr name="progressColor" format="integer" />
+    </declare-styleable>
+</resources>

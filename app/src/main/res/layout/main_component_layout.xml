@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvHomePercentage"
+            style="@style/percentageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/rlContainer"
+            app:layout_constraintEnd_toStartOf="@+id/rlContainer"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rlContainer"
+            tools:text="40%" />
+
+        <RelativeLayout
+            android:id="@+id/rlContainer"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvVisitorPercentage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvHomePercentage"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvLabel"
+                style="@style/labelText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                tools:text="Possesion" />
+
+            <ProgressBar
+                android:id="@+id/pbPercentage"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutDirection="ltr"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/circle_progressbar"
+                android:rotation="90"
+                tools:progress="10" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvVisitorPercentage"
+            style="@style/percentageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/rlContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/rlContainer"
+            app:layout_constraintTop_toTopOf="@+id/rlContainer"
+            tools:text="60%" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</merge>
